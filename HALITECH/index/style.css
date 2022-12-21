@@ -1,0 +1,467 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins', sans-serif;
+}
+body{
+    background-color: #b3b7ebc7;
+}
+.header{
+    min-height:100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/images7.jpg);
+    background-position: center;
+    background-size:cover;
+    position:relative;
+}
+/**this is a comment**/
+.nav-links{
+    flex: 1;
+    display: flex;
+    margin-top: 35px;
+    float: right;
+}
+
+.link li a{
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+
+.nav-links ul li{
+    list-style: none;
+    position: relative;
+    margin: 10px;
+    display: inline-block;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: blue;
+    display:block;
+    margin: auto;
+    transition: 1s;
+
+}
+.nav-links ul li:hover::after{
+    width:80%;
+    font-weight: bold;
+}
+
+.halitech{
+    width: 250px;
+    float: left;
+}
+.header img:hover{
+    box-shadow: #f44336;
+}
+.text-box{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color:white
+}
+.text-box h1{
+    font-size: 60px;
+}
+.text-box p{
+    margin: 40px 0 140px;
+    font-size: 18px;
+}
+.button{
+    color:blue;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 12px;
+    font-size: 14px;
+    padding: 12px 34px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.text-box a{
+    text-transform: uppercase;
+
+}
+.button:hover{
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+    transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+@media(max-width: 700px){
+    .text-box h1{
+    font-size: 20px;
+    }
+    .link li a{
+        margin: 5px;
+    }
+    .nav-links ul li{
+        font-size: 10px;
+        list-style: none;
+        position: relative;
+        margin: 10px;
+    }
+    .nav-links{
+        display: flex;
+        margin-top: 10px;
+        float: right;
+    }
+    nav{
+        display: flex;
+    }
+    .halitech{
+        width: 130px;
+    }
+    
+    .nav-links ul li:hover::after{
+        width: 100%;
+    }
+    .course-body{
+        flex-direction: column;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .students{
+        text-align: center;
+        flex-direction: column;
+    }
+    .review{
+        text-align: center;
+    }
+    .students p{
+        width: 400px;
+    }
+}
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.course h1{
+    font-size: 50px;
+    font-weight: 600px;
+    text-transform: uppercase;
+
+}
+.course-p{
+    font-size: 20px;
+    margin: 15px;
+    font-weight: 700;
+    padding: 10px;
+}
+.course-body{
+    margin-top: 5%;
+    justify-content: space-between;
+    display: flex;
+}
+.course-level{
+    flex-basis: 31%;
+    background: #f8e0e0;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    padding: 20px 0 20px;
+    transition: 1s;
+}
+.course-level h3{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    transition: 1s;
+}
+.course-level p{
+    margin: 15px;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+    line-height: 25px;
+}
+.course-level:hover{
+    box-shadow: 0 0 30px 0px rgba(2, 38, 184, 0.7);
+}
+.course-level:hover h3{
+    color: blue;
+}
+.reg{
+    color: white;
+    border: 1px solid blue;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 700;
+    background-color: blue;
+    font-size: 20px;
+    padding: 12px 34px;
+    cursor: pointer;   
+    transition: 1s;
+}
+.reg:hover{
+    color: black;
+    background-color: transparent;
+}
+
+
+.branch{
+    width: 80%;
+    text-align: center;
+    padding-top: 50px;
+    margin: auto;
+}
+.branch p{
+    font-size: 20px;
+    margin: 15px;
+    font-weight: bold;
+}
+.branch h1{
+    text-transform: uppercase;
+    font-size: 50px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.branch-col{
+    height: 600px;
+    width: 100%;
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+
+}
+
+
+.layer{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+.layer h3{
+    font-size: 26px;
+    width: 100%;
+    color: white;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    transition: 1s;
+    opacity: 0;
+}
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+.review{
+    text-align: center;
+    margin-top: 100px;
+}
+.rev-p{
+    font-size: 20px;
+    margin: 15px;
+    font-weight: bold;
+}
+.review h1{
+    text-transform: uppercase;
+    font-size: 50px;
+}
+.students{
+    display: flex;
+    padding: 20px;
+    margin-top: 50px;
+    width: 1000px;
+}
+.students img{
+    height: 200px;
+    border-radius: 50px;
+    width: 200px;
+}
+.students p{
+    padding: 10px;
+    margin-top: 30px;
+    text-align: left;
+    font-size: 20px;
+}
+.students h2{
+    text-transform: uppercase;
+    text-align: left;
+    color: white;
+}
+.students .text{
+    margin-left: 10px;
+}
+.footer{
+    min-height:20vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/images7.jpg);
+    background-position: center;
+    background-size:cover;
+    position:relative;
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+    align-items: center;
+    padding: 30px 0;
+}
+.footer h2{
+    margin-top: 50px;
+    font-size: 30px;
+    color: white;
+}
+
+.social-links{
+    text-align: center;
+    margin: 5px;
+}
+.social-links .fa{
+    color: white;
+    font-size: 20px;
+    margin-left: 18px;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.social-links .fa:hover{
+    font-size: 22px;
+    border-radius: 10px;
+    background-color: #f44336;
+    bottom: 50%;
+}
+
+.sub-header{
+    min-height:80vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/background.jpg);
+    background-position: center;
+    background-size:cover;
+    position:relative;
+}
+.sub-header .text-box{
+    margin-top: 50px;
+}
+.sub-header img{
+    width: 250px;
+    float: left;
+}
+.about-story{
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+.story h2{
+    margin-top: 100px;
+    font-size: 40px;
+}
+.story p{
+    justify-content:flex-end;
+    font-size: 20px;
+    margin-top: 20px;
+}
+/**contact page**/
+.contact{
+    margin-top: 50px;
+}
+input{
+    width: 300px;
+    height: 30px;
+    border-radius: 15px;
+ 
+    border-style: none;
+    text-align: center;
+}
+textarea{
+    text-align: center;
+    width: 300px;
+    height: 80px;
+    border-radius: 10px;
+    border-style: none;
+}
+.contact-footer{
+    min-height:20vh;
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+    align-items: center;
+    padding: 30px 0;
+}
+.contact-footer h2{
+    margin-top: 50px;
+    font-size: 30px;
+    color: black;
+}
+.contact-footer .fa{
+    color: black;
+    font-size: 20px;
+    margin-left: 18px;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+/**courses**/
+.sub-course{
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    flex-direction: column;
+}
+.sub-course h1{
+    font-size: 50px;
+    font-weight: 600px;
+    text-transform: uppercase;
+
+}
+.sub-course .course-body{
+    text-align: center;
+    margin-top: 5%;
+    justify-content: center;
+    display: inline-block;
+}
+
+.sub-course .course-level{
+    text-align: center;
+    height: 200px;
+    width: 400px;
+    flex-basis: 31%;
+    background: #f8e0e0;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    padding: 20px 0 20px;
+    transition: 1s;
+}
+.sub-course .course-level h3{
+    margin-top: 62px;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    transition: 1s;
+}
+.sub-course .course-level:hover{
+    box-shadow: 0 0 30px 0px rgba(2, 38, 184, 0.7);
+}
+.sub-course .course-level:hover h3{
+    color: blue;
+}
+.course-header{
+    min-height:80vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/wall.jpg);
+    background-position: center;
+    background-size:cover;
+    position:relative;
+}
+
