@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link href="style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/css/font-awesome.min.css">
 
 </head>
 <body>
     <section class="sub-header">
         <nav>
             <a href="index.html"><img class="halitech" src="images/log.png"></a>
-            <div class="nav-links">
-                <i class="fa fa-times"></i>
+            <div class="nav-links" id="navlinks">
+                <i id="close" class="fa fa-close" onclick="hidemenu()"></i>
                 <ul class="link">
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
@@ -23,7 +20,7 @@
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </div>
-            <i class="fa fa-bars"></i>          
+            <i id="menu" class="fa fa-bars" onclick="showmenu()"></i>  
         </nav>
         <div class="text-box">
             <h1>About Us</h1>
@@ -57,11 +54,19 @@
             <div class="about head">
                 <h2>OUR ACHIEVEMENTS</h2>
             </div>
-            <p>we have made our students into great individuals because of their personalm quota
+            <p>We have made our students into great individuals because of their personalm quota
                 
             </p>
         </div>
     </section>
-
+    <script>
+        var navlinks = document.getElementById('navlinks');
+        function showmenu(){
+            navlinks.style.right = "0";
+        }
+        function hidemenu(){
+            navlinks.style.right = "-200px";
+        }
+    </script>
 </body>
 </html>

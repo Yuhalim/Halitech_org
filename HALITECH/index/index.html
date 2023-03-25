@@ -4,17 +4,15 @@
         <meta name="viewport" content="with=device-width, initial-scale=1.0">
         <title>HALITECH</title>
         <link href="style.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/all.css" type="text/css">
-
+        <link rel="stylesheet" href="css/css/font-awesome.min.css">
     </head>
     
     <body>
         <section class="header">
             <nav>
                 <a href="index.html"><img  class="halitech" src="images/log.png"></a>
-                <div class="nav-links">
-                    <i class="fa fa-times"></i>
+                <div class="nav-links" id="navlinks">
+                    <i id="close" class="fa fa-close" onclick="hidemenu()"></i>
                     <ul class="link">
                         <li><a href="index.html">HOME</a></li>
                         <li><a href="about.html">ABOUT</a></li>
@@ -23,7 +21,7 @@
                         <li><a href="contact.html">CONTACT</a></li>
                     </ul>
                 </div>
-                <i class="fa fa-bars"></i>          
+                <i id="menu" class="fa fa-bars" onclick="showmenu()"></i>          
             </nav>
             <div class="text-box">
                 <h1>Nation's biggest Organization</h1>
@@ -57,7 +55,7 @@
 
         <section class="branch">
             <h1>Our Branches</h1>
-            <p>We have three branches located in the citeis of Nigeria</p>
+            <p>We have three branches located in the cities of Nigeria</p>
 
             <div class="row">
                 <div class="branch-col">
@@ -103,7 +101,7 @@
                     <img src="images/student3.jpg">
                     <div class="text">
                         <h2>Maryam Usman</h2>
-                        <p>"I have been able to bring myself up just to devwelop my personal skills"</p>
+                        <p>"I have been able to bring myself up just to develop my personal skills"</p>
                     </div>
                 </div>
                 <div class="students">
@@ -116,17 +114,25 @@
             </div>
         </section>
         <section class="footer">
-            <h2>Contact us</h2> 
+            <a href="contact.html" class="button">Contact Us</a> 
             <div class="social-links">
-                    <a href="contact.html" class="fa"><img src="images/facebook.png"></a>
-                    <a href="contact.html" class="fa"><img src="images/instagram2.png"></a>
-                    <a href="contact.html" class="fa"><img src="images/twitter.png"></a>
-                    <a href="contact.html" class="fa"><img src="images/youtube.png"></a>
-                    <a href="contact.html" class="fa"><img src="images/email.png"></a>
-                    <a href="contact.html" class="fa"><img src="images/linkedin.png"></a>
-
+                    <a href="facebook.com"><i class="fa fa-facebook"></i></a>
+                    <a href="instagram.com"><i class="fa fa-instagram"></i></a>
+                    <a href="twitter.com"><i class="fa fa-twitter"></i></a>
+                    <a href="youtube.com"><i class="fa fa-youtube"></i></a>
+                    <a href="mailto:yusufhalimu@gmail.com"><i class="fa fa-envelope"></i></a>
+                    <a href="www.linkedIn.com"><i class="fa fa-linkedin"></i></a>
             </div>
 
         </section>
+        <script>
+            var navlinks = document.getElementById('navlinks');
+            function showmenu(){
+                navlinks.style.right = "0";
+            }
+            function hidemenu(){
+                navlinks.style.right = "-200px";
+            }
+        </script>
     </body>
 </html>
