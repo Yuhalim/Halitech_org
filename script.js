@@ -1,26 +1,51 @@
-var name = document.getElementById("name");
-var button = document.getElementById("button");
-button.addEventListener("click", function(){
-    var name = document.getElementById("name");
-    var message = name.value;
-    alert("Thank you "+message+ ", you have successfully contacted us and will be responded to in due time");
-    name.value="";
-})
+// var name = document.getElementById("name");
+// var button = document.getElementById("button");
+// button.addEventListener("click", function(){
+//     var name = document.getElementById("name");
+//     var message = name.value;
+//     alert("Thank you "+message+ ", you have successfully contacted us and will be responded to in due time");
+//     name.value="";
+// })
 
-var img=document.getElementById('img');
-var slides = ["images/images1.jpg", "images/images2.jpg", "images/images3.jpg"];
-var start = 0;
 
-function slider(){
-    if(start<slides.length){
-        start=start+1;
-    }
-    else{
-        start=1;
-    }
-    console.log(img);
-    img.innerHTML = "<img src="+slides[start-1]+">";
 
+let slides = document.querySelectorAll('slide-cont');
+let index = 0;
+
+function next(){
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
 }
-setinterval(slider, 2000);
 
+function prev(){
+    slides[index].classList.remove('active');
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add('active');
+}
+
+var navlinks = document.getElementById('#navlinks');
+function showmenu(){
+    navlinks.style.right = "0";
+}
+function hidemenu(){
+    navlinks.style.right = "-200px";
+} 
+
+
+
+//registeration js//
+let names = document.getElementById("name");
+let email = document.getElementById("email");
+let text = document.getElementById("text");
+let button = document.getElementById('button');
+button.addEventListener("click", function(){
+    let message = names.value;
+    if(names!='' && email!='' && course!='' && level!=''){
+        alert('Thank you, '+message+ ' you will be emailed to receive details about the registration');
+    }else{
+        alert('Please ensure to fill all the areas');
+    }
+})
+names.value = '';
+//regristeration js//

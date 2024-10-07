@@ -2,9 +2,22 @@
     margin: 0;
     padding: 0;
     font-family:'Poppins', sans-serif;
+    text-transform: capitalize;
+}
+:root{
+    --black:#2c2c54;
+    --orange:#ff9f1a;
+}
+html{
+    font-size: 62%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body{
     background-color: #b3b7ebc7;
+}
+span{
+    color: blue
 }
 .header{
     min-height:100vh;
@@ -26,6 +39,8 @@ body{
     text-decoration: none;
     color: white;
     margin: 10px;
+    font-size: 15px;
+    transition: 1s;
 }
 
 .nav-links ul li{
@@ -33,6 +48,25 @@ body{
     position: relative;
     margin: 10px;
     display: inline-block;
+    transition: 1s;
+}
+.nav-links ul li>ul{
+    display: none;
+}
+.nav-links ul li>ul{
+    /* position: absolute; */
+    background: #ffff;
+    margin-top: 3px;
+}
+.nav-links ul li>ul>li{
+    padding: 4px;
+    color: blue;
+    display: block;
+    font-size: 17px;
+}
+.nav-links ul li:hover>ul{
+
+    display: block;
 }
 .nav-links ul li::after{
     content: '';
@@ -42,7 +76,6 @@ body{
     display:block;
     margin: auto;
     transition: 1s;
-
 }
 .nav-links ul li:hover::after{
     width:80%;
@@ -65,6 +98,7 @@ body{
 }
 /**beginning of navigation bar**/
 .text-box h1{
+    margin-bottom: 15px;
     font-size: 60px;
 }
 .text-box p{
@@ -103,13 +137,17 @@ nav .fa{
     display: none;
 }
 @media(max-width: 700px){
+    html{
+        font-size: 55%;
+    }
     .halitech{
         width: 200px;
     }
     .text-box h1{
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
     }
+
     
     .nav-links ul li{
         display: block;
@@ -228,6 +266,9 @@ nav .fa{
     background-color: transparent;
 }
 @media(max-width: 700px){
+    html{
+        font-size: 65%;
+    }
     .row{
         flex-direction: column;
     }
@@ -449,6 +490,7 @@ nav .fa{
 /**contact page**/
 .contact{
     margin-top: 50px;
+    text-align: center;
 }
 input{
     width: 400px;
@@ -465,6 +507,10 @@ textarea{
     border-style: none;
 }
 
+.regg{
+    margin-top: 300px;
+    text-align: center;
+}
 
 /**courses**/
 .sub-course{
@@ -534,24 +580,85 @@ textarea{
     background-size:cover;
     position:relative;
 }
-.image{
+/* .image{
     margin-top: 100px;
     text-align: center;
     justify-content: space-between;
 }
 .image img{    
     size: 5px;
-    max-width: 300px;
-    height: 220px;
-    display: inline-block;
+    width: 300px;
+    height: 320px;
+    display:inline-block;
     margin-bottom: 40px;
     justify-content: space-between;
+    transition: 1s;
+} */
+.home .slide-cont img{
 
+    height: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-right: 50px;
+    padding-top: 10px;
 }
-.image img{
-    height: 200px;
+
+.home .slide-cont:nth-child(1){
+    background-color:aliceblue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
-.slider{
+.home .slide-cont:nth-child(2){
+    background-color:aliceblue;
+    background-size: cover;
+    background-position: center;
+}
+.home .slide-cont:nth-child(3){
+    background-color:aliceblue;
+    background-size: cover;
+    background-position: center;
+}
+.home .slide-cont{
+    display: none;
+}
+.home .slide-cont.active{
+    display: block;
+}
+.home #prev,
+.home #next{
+    position: absolute;
+    top: 900px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    z-index: 100;
+    height: 5rem;
+    width: 5rem;
+    line-height: 4.4rem;
+    font-size: 2rem;
+    color: #2c2c54;
+    border: .2rem solid var(--black);
+    cursor: pointer;
+    text-align: center;
+    transition: 1s;
+}
+.home #prev:hover,
+.home #next:hover{
+    color: #fff;
+    background: var(--orange);
+}
+
+.home #prev{
+    left:3rem
+}
+.home #next{
+    right:3rem
+}
+
+/* .slider{
     width: 500px;
     height: 300px;
     margin-left: auto;
@@ -559,8 +666,8 @@ textarea{
     margin-top: 0px;
     text-align: center;
     overflow: hidden;
-}
-
+} */
+/* 
 .image-container{
     width: 1500px;
     background-color: transparent;
@@ -586,26 +693,10 @@ textarea{
 }
 #slide-3:target ~ .image-container{
     left: -1000px;
-}
-.buttons{
-    position: relative;
-    top: -20px;
-    text-align: center;
-}
-.buttons a{
-    display: inline-block;
-    height: 15px;
-    width: 15px;
-    border-radius: 50px;
-    background-color: lightgreen;
-
-    align-items: center;
-}
+} */
 .copy{
-    padding: 20px 0;
-    margin: auto;
     color: white;
-    font-size: 15px;
+    font-size: 13px;
 }
 @keyframes bg-change{
     0%,100%{

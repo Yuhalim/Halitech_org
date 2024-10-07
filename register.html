@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/css/font-awesome.min.css">
 </head>
 <body>
-    <section class="header">
+    <section class="header">]
         <nav>
             <a href="index.html"><img  class="halitech" src="images/log.png"></a>
             <div class="nav-links" id="navlinks">
@@ -21,10 +24,24 @@
             </div>
             <i id="menu" class="fa fa-bars" onclick="showmenu()"></i>  
         </nav>
-        <div class="text-box">
-            <h1>Come join us</h1>
-            <p>Learning is the source of human progress.<br> Programing has the power to transform our world<br> for ourselves,<br> for our families,<br> for our communities.<br>Guiding curious minds towards the world of technology is our number one priority<br></p>
+        <div class="regg">
+            <form>
+                <input type="text" id="name" placeholder="What is your name" required>
+                <br><br>
+                <input type="text" id="email" placeholder="What is your email" required>
+                <br><br>
+                <input type="text" id="course" placeholder="What is course would you like to offer?" required>
+                <br><br>                
+                <input type="text" id="level" placeholder="What is your level, Beginner?, Intermediate?, or Advanced?" required>
+                <br><br>
+                <button class="button" id="button">Submit</button>
+
+            </form>
         </div>
     </section>
+    <script  src="script.js">
+        
+
+    </script>
 </body>
 </html>
